@@ -7,6 +7,7 @@ const Home = () => {
   const [location, setLocation] = useState({});
   const [picture, setpicture] = useState([]);
   const [gender, setGender] = useState([]);
+  const [checked , setchecked] = useState("")
   const [toggle, setToggle] = useState(true);
 
   const fetchData = () => {
@@ -28,10 +29,9 @@ const Home = () => {
     setGender(gender);
     setpicture(picture);
     setToggle(false);
+    setchecked(index)
     // document.querySelector(".card").classList.add("active");
-    document
-      .querySelectorAll(".card")
-      .forEach((index) => index.classList.add("active"));
+    // user.map((todo, j) => j !== index ? console.log("Sf") :console.log("dd"))
   };
   useEffect(() => {
     fetchData();
@@ -81,6 +81,7 @@ const Home = () => {
               <>
                 <div
                   className="card"
+                  style={{"backgroundColor" : checked === index ? "#a259ff": ""}}
                   onClick={selectCard.bind(
                     this,
                     curr.name,
