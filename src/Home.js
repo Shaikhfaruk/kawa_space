@@ -30,8 +30,6 @@ const Home = () => {
     setpicture(picture);
     setToggle(false);
     setchecked(index);
-    // document.querySelector(".card").classList.add("active");
-    // user.map((todo, j) => j !== index ? console.log("Sf") :console.log("dd"))
   };
   useEffect(() => {
     fetchData();
