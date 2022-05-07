@@ -120,6 +120,20 @@ body {
 .cards .active .mail {
   color: #fff;
 }
+
+.cards #active {
+  background: #a259ff;
+  color: #fff;
+}
+.cards #active .card-heading {
+  color: #fff;
+}
+.cards #active .card-top {
+  color: #fff;
+}
+.cards #active .mail {
+  color: #fff;
+}
 .card-heading {
   margin: 0.5rem 0;
   font-family: "Roboto";

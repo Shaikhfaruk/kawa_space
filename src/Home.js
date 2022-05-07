@@ -7,7 +7,7 @@ const Home = () => {
   const [location, setLocation] = useState({});
   const [picture, setpicture] = useState([]);
   const [gender, setGender] = useState([]);
-  const [checked , setchecked] = useState("")
+  const [checked, setchecked] = useState("");
   const [toggle, setToggle] = useState(true);
 
   const fetchData = () => {
@@ -29,7 +29,7 @@ const Home = () => {
     setGender(gender);
     setpicture(picture);
     setToggle(false);
-    setchecked(index)
+    setchecked(index);
     // document.querySelector(".card").classList.add("active");
     // user.map((todo, j) => j !== index ? console.log("Sf") :console.log("dd"))
   };
@@ -81,7 +81,11 @@ const Home = () => {
               <>
                 <div
                   className="card"
-                  style={{"backgroundColor" : checked === index ? "#a259ff": ""}}
+                  id={checked === index ? "active" : ""}
+                  style={{
+                    backgroundColor: checked === index ? "#a259ff" : "",
+                    color: checked === index ? "white" : "",
+                  }}
                   onClick={selectCard.bind(
                     this,
                     curr.name,
@@ -103,15 +107,6 @@ const Home = () => {
               </>
             );
           })}
-          {/* <div className="card active">
-            <div className="card-top">
-              <span className="card-gender">Female</span>
-              <span>.</span>
-              <span className="state">NL</span>
-            </div>
-            <h2 className="card-heading">Ms. Teatske Nijenhuis</h2>
-            <div className="mail">teatske.nijenhuis@example.com</div>
-          </div> */}
         </div>
       </div>
     </>
